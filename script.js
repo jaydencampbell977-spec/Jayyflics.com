@@ -16,7 +16,7 @@
   lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) { lightbox.style.display='none'; lightbox.setAttribute('aria-hidden','true'); } });
 
   // EmailJS init - IMPORTANT: replace the placeholders with your EmailJS info
-  if(window.emailjs){ emailjs.init('YOUR_EMAILJS_USER_ID'); }
+  if(window.emailjs){ emailjs.init('YDvKz_waQmALZ2s69'); }
 
   const form = document.getElementById('bookingForm');
   const status = document.getElementById('status');
@@ -36,7 +36,7 @@
     status.textContent = 'Sending...';
 
     // Send via EmailJS (replace SERVICE_ID and TEMPLATE_ID)
-    emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', {
+    emailjs.send('service_ic9kfj9','template_0o9yp4r', {
       from_name: name,
       reply_to: email,
       phone: phone,
