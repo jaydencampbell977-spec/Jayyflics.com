@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JayyFlics — Booking</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="app">
+<header class="header">
+  <img src="assets/jayyflics-logo.png" alt="JayyFlics Photography Logo" class="logo-img">
+</header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <h2 class="hero-title">Capture Your Vision</h2>
+          <p class="hero-sub">Book an exclusive session — editorial, portrait, or event.</p>
+          <a class="cta" href="#booking">Book Now</a>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h3>Services</h3>
+        <div class="cards">
+          <article class="card">Portrait Session<br><span>$75</span></article>
+          <article class="card">Fashion Shoots<br><span>$150</span></article>
+          <article class="card">Event Coverage<br><span>$350</span></article>
+          <article class="card">Custom Shoot<br><span>Contact</span></article>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <h3>Gallery</h3>
+        <div class="grid">
+          <img src="assets/placeholder1.jpg" alt="gallery1" class="grid-item" loading="lazy">
+          <img src="assets/placeholder2.jpg" alt="gallery2" class="grid-item" loading="lazy">
+          <img src="assets/placeholder3.jpg" alt="gallery3" class="grid-item" loading="lazy">
+          <img src="assets/placeholder4.jpg" alt="gallery4" class="grid-item" loading="lazy">
+        </div>
+      </section>
+
+      <section id="booking" class="booking">
+        <h3>Book a Session</h3>
+        <form id="bookingForm" class="booking-form">
+          <div class="row">
+            <label>Full name<input name="from_name" id="name" required></label>
+            <label>Email<input type="email" name="reply_to" id="email" required></label>
+          </div>
+          <div class="row">
+            <label>Phone<input name="phone" id="phone" type="tel" required></label>
+            <label>Service
+              <select name="service" id="service" required>
+                <option value="">Choose package</option>
+                <option>Portrait Session</option>
+                <option>Fashion Shoot</option>
+                <option>Event Coverage</option>
+                <option>Custom Shoot</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <label>Date & Time<input type="datetime-local" name="datetime" id="datetime" required></label>
+          </div>
+          <label>Details<textarea name="message" id="message" placeholder="Any details, location, or references"></textarea></label>
+          <div class="actions">
+            <button type="submit" id="submitBtn">Send Booking</button>
+            <div id="status" class="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 JayyFlics Photography • All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <!-- Lightbox modal for gallery -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose">✕</button>
+    <img id="lbImage" src="" alt="expanded">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
